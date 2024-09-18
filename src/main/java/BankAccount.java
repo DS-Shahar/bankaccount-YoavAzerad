@@ -2,13 +2,13 @@ class BankAccount
 {
 	private String name;
     private int balance;
-    private int frame;
+    private int minBalance;
     
-    public BankAccount(String name,int balance,int frame)  {
+    public BankAccount(String name,int balance,int minBalance)  {
         this.name=name;
         this.balance=balance;
-        this.frame=frame;
-    }
+        this.minBalance=minBalance;
+    } 
     
     public String getName() { 
         return this.name;
@@ -16,8 +16,8 @@ class BankAccount
     public int getBalance() { 
         return this.balance;
     }
-    public int getFrame() { 
-        return this.frame;
+    public int getminBalance() { 
+        return this.minBalance;
     }
 
     public void deposit(int amount) {
@@ -25,13 +25,17 @@ class BankAccount
     }
 
     public void withdraw(int amount) {
-        if (balance-amount<-1000) {
+        if (balance-amount<minBalance) {
             System.out.println("Sorry, you can't withdraw!");
             
         }
         else {
             balance = balance - amount;
         }
+    }
+
+    public String toString(){ 
+        return "Balance of "+this.name+": "+this.balance;
     }
 
     public void transfer(BankAccount a, BankAccount b, int amount) {

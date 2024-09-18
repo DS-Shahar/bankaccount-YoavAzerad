@@ -14,5 +14,6 @@ class Main
           ba1.transfer(ba1, ba2,1600);
           System.out.println(ba1.getName() + "'s balance is: " + ba1.getBalance());
 		  System.out.println(ba2.getName() + "'s balance is: " + ba2.getBalance());
+		  ba1.toString();
 	  }
 }
