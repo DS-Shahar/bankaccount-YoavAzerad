@@ -4,13 +4,13 @@ class Main
 	  Scanner reader = new Scanner(System.in);
 	  public static void main(String[] args) {
 
-        Rectangle r1 = new Rectangle(11, 3);
-        r1.draw();
-        r1.calcArea();
-        r1.calcPerimeter();
-        System.out.println(r1.toString());
-        r1.scale(2);
-        r1.calcArea();
+        Circle c1 = new Circle(5);
+        Circle c2 = new Circle(4);
+        double areaC1 = c1.area();
+        double areaC2 = c2.area();
+        System.out.println("The area of the first circle is: " + areaC1);
+        System.out.println("The area of the second circle is: " + areaC2);
+
 
 
 
